@@ -22,3 +22,8 @@
 
 - reset.css は Component 内
 - styled-components
+
+## Memo
+
+Knobs ではなく,Control を使っていく指針
+[https://developer.aliyun.com/mirror/npm/package/@storybook/addon-controls]

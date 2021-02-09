@@ -1,30 +1,21 @@
 import React from 'react';
-import { withKnobs, text, boolean, select, radios } from '@storybook/addon-knobs';
-import { Button } from './Button';
+import { Button, ButtonProps } from './Button';
 
 export default {
-  title: 'Atoms/Button',
-  decorators: [withKnobs],
+  title: 'Sample/Button',
   argTypes: {
     label: { control: 'text' },
+    onClick: () => { },
     baseColor: { control: 'color' },
     pressColor: { control: 'color' },
     disabled: { control: 'boolean' },
   },
 };
 
-export const ButtonComponent = (arg) =>
-  <Button
-    label={text('label', 'テキスト')}
-    onClick={() => { }}
-    disabled={boolean('disabled', false)}
-    baseColor={radios('base color', { black: '#444', tomato: 'tomato', skyblue: 'skyblue' }, '#444')}
-    pressColor={radios('press color', { lime: 'limegreen', orange: 'orange' }, 'lime')}
-    {...arg}
-  />;
+export const ButtonComponent = (arg: ButtonProps) => <Button {...arg} />;
 
 ButtonComponent.args = {
-  label: 'Button',
+  label: 'Buttonnnn',
 };
 
 export const lime = ButtonComponent.bind({});
