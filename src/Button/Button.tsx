@@ -6,8 +6,8 @@ export type ButtonProps = {
   onClick: () => void
   label: string
   disabled?: boolean
-  baseColor: string
-  pressColor: string
+  baseColor?: string
+  pressColor?: string
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -40,6 +40,7 @@ const StyledButton = styled.button < { baseColor: string, pressColor: string, } 
   border-radius: 66px;
   box-shadow: 0px 4px 0px ${({ baseColor }) => baseColor};
   position: relative;
+  background-color: #fff;
 
   &:active {
     position: relative;
@@ -50,4 +51,7 @@ const StyledButton = styled.button < { baseColor: string, pressColor: string, } 
   &:disabled {
     opacity: 0.4;
   }
+  /* reset */
+  outline: none;
+  appearance: none;
 `;

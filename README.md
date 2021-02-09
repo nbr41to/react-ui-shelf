@@ -3,20 +3,22 @@
 ## Task
 
 -[] eslint,prettier 入れる
--[]
+-[] lp 作る
 
 ## chromatic
 
-[build page](https://www.chromatic.com/builds?appId=600ee165441d020021f29d99)
+- [build page](https://www.chromatic.com/builds?appId=600ee165441d020021f29d99)
+- [Storybook page](https://600ee165441d020021f29d99-qtcfjjejaj.chromatic.com/)
+- [control anotation](https://storybook.js.org/docs/react/essentials/controls#annotation)
 
-## src
+## ディレクトリ構成
 
-Components
-
-## page
-
-LP,testView,Gallery など
+- page
+  LP,testView,Gallery など
+- src
+  Components
 
 ## Rules
 
-- reset.css は Component 内で？
+- reset.css は Component 内
+- styled-components
