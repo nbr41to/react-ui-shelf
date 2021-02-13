@@ -11,7 +11,7 @@ export type AccordionProps = {
 export const Accordion: React.FC<AccordionProps> = ({ label, labelColor = '#333', bgColor = '#ccc', children, className }) => {
   const [open, setOpen] = React.useState(false)
 
-  const he2rgb = (colorCode: string): string => {
+  const hex2rgb = (colorCode: string): string => {
     // RGBA
     if (colorCode.slice(0, 4) === "rgba") return colorCode = colorCode.slice(5, -3)
     // RGB
@@ -28,7 +28,7 @@ export const Accordion: React.FC<AccordionProps> = ({ label, labelColor = '#333'
         <StyledLabel>{label}</StyledLabel>
         <ArrowIcon open={open} color={labelColor} />
       </StyledLabelBox>
-      <StyledDetail open={open} bgColorRGB={() => he2rgb(bgColor)}>
+      <StyledDetail open={open} bgColorRGB={() => hex2rgb(bgColor)}>
         {children}
       </StyledDetail>
     </StyledAccordion>
